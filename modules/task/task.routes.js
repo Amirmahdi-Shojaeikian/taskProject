@@ -15,7 +15,7 @@ router
   router
   .route("/:taskID")
   .get(taskController.getOne)
-  .put(taskController.updateTask)
+  .put(uploader.single("file"),taskController.updateTask)
   .delete(taskController.deleteTask);
   
 module.exports = router;

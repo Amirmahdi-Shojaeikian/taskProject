@@ -1,7 +1,6 @@
 const userModel = require("./../../model/user");
 const bcrypt =require("bcryptjs")
 const {registerValidateSchema,loginValidateSchema} = require("./auth.validate");
-const isAdmin = require("../../utils/isAdmin")
 
 exports.register = async (req, res) => {
   try {

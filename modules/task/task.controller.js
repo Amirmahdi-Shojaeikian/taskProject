@@ -110,8 +110,7 @@ exports.updateTask = async (req, res) => {
               description,
               files: req.file.filename,
             }
-          )
-          .lean();
+          )          
         return res.status(200).json(task);
       }
       const task = await taskModel
@@ -122,7 +121,6 @@ exports.updateTask = async (req, res) => {
             description,
           }
         )
-        .lean();
       return res.status(200).json(task);
     }
     return res.status(404).json({

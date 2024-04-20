@@ -4,9 +4,7 @@ const uploader = require("./../../middleware/multer");
 
 const router = express.Router();
 
-// router
-//   .route("/edit-profile")
-//   .put(uploader.single("cover"), userController.updateProfile);
+
 router
   .route("/user/:userID")
   .post(uploader.single("file"), taskController.create)

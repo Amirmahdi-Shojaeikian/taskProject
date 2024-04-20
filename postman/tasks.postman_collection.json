@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "ed625c89-3fb4-4975-b0ab-d0c29e6d09d0",
+		"name": "tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30950862"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"amshhhhhh\",\r\n     \"email\" :\"amirmahdiiiii@gmail.com\" ,\r\n     \"password\" : \"13822003\" ,\r\n     \"phoneNumber\" : \"09030882222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4004/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"amsh\",\r\n    \"password\" : \"13822003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4004/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getAllUserByAdmin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4004/user/66216e88830b2224c5c54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"user",
+								"66216e88830b2224c5c54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserByAdmin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"6622be7e0020b35515fe7d70\",\r\n    \"role\" : \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4004/user/66216e88830b2224c5c542e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"user",
+								"66216e88830b2224c5c542e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserByAdmin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"66236d6f747074e9a3258bd8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4004/user/66216e88830b2224c5c542e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"user",
+								"66216e88830b2224c5c542e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "6622be7e0020b35515fe7d70",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "amirrrrr@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "09126339390",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "newPassword",
+									"value": "13822003",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/C:/Users/MSI/Desktop/out..jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4004/user/edit-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"user",
+								"edit-profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "createTask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MSI/Desktop/amirmahdi shojaeikian(Midterm DNS and DHCP).pdf"
+								},
+								{
+									"key": "title",
+									"value": "برنامه ماهانه",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "متن تست برای برنامه ماهانه",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4004/task/user/66236d6f747074e9a3258bd8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"task",
+								"user",
+								"66236d6f747074e9a3258bd8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTask",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4004/task/user/66221c579c0801dd673e0702",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"task",
+								"user",
+								"66221c579c0801dd673e0702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneTask",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4004/task/6622cd817887474f1df1a66a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"task",
+								"6622cd817887474f1df1a66a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4004/task/6622d22d2189c01b153ed82c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"task",
+								"6622d22d2189c01b153ed82c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MSI/Desktop/parhoweb.jpg"
+								},
+								{
+									"key": "description",
+									"value": "متن تست برای برنامه ماهیانه",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4004/task/6622cd817887474f1df1a66a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"task",
+								"6622cd817887474f1df1a66a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "downloadFile",
+			"item": [
+				{
+					"name": "getFile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4004/download/1713597848003.8884.pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"download",
+								"1713597848003.8884.pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
